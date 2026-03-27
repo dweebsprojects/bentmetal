@@ -1,0 +1,15 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: large;
+}
+
+:root {
+    --brand-color: #8426af;
+    --boxshadow: #121616;
+}
+
