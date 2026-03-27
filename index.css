@@ -67,3 +67,36 @@
     transform: translateX(0) rotate(0deg);
   }
 }
+
+
+@media (max-width: 900px) {
+    .banner {
+        height: 40vh;
+    }
+    .banner img {
+        object-fit: cover; 
+    }
+    .banner-txt span {
+        font-size: 2rem;
+    }
+    .getbent {
+        padding: 0 20px;
+    }
+
+    .getbent strong {
+        font-size: 2.5em;
+        white-space: normal;
+        margin-top: 5px;
+    }
+    
+    @keyframes goofySlide {
+        0% {
+            transform: translateX(-100%) rotate(-10deg);
+            opacity: 0;
+        }
+        100% {
+            transform: translateX(0) rotate(0deg);
+            opacity: 1;
+        }
+    }
+}
