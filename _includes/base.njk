@@ -3,22 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bent Metal Exteriors</title>
+    <title>BENT METAL EXTERIORS YYC</title>
 
     <style>
+        {% include "poppins.css" %}
         {% include "style.css" %}
+        {% include "header.css" %}
+
+       {% if css_file %}
+            {% include css_file %}
+        {% endif %}
     </style>
 
-    {% if css_file %}
-      <link rel="stylesheet" href="/{{ css_file }}">
-    {% endif %}
+    <link rel="stylesheet" href="/footer.css" media="print" onload="this.media='all'">
+
+    <link rel="icon" type="image/x-icon" href="/images/logos/outline_logo.png">
 </head>
 <body>
+
+    {% include "header.html" %}
 
     <main>
         {{ content | safe }}
     </main>
 
+    {% include "footer.html" %}
+
+    {% if js_files %}
+      {% for script in js_files %}
+        <script src="{{ script }}" defer></script>
+      {% endfor %}
+    {% endif %}
+    
+    {% if js_file %}
+        <script src="{{ js_file }}" defer></script>
+    {% endif %}
 
 </body>
 </html>

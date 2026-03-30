@@ -1,0 +1,54 @@
+<header>
+    <div class="logo">
+        <a id="logo" class="home_logo" href="/">
+            {% include "home_logo.svg" %}
+        </a>
+    </div>
+
+    <div class="links">
+        <a href="/">Home</a>
+        <nav>
+            <ul>
+                <li id="services">
+                    <a class="services_bar" href="#">
+                        Services 
+                        <img src="/images/icons/caret-down.svg" class="caret-icon">
+                    </a>
+                    <ul class="dropdown">
+                        <li><a href="troughs-gutters.html">Eavestroughs & Gutters</a></li>
+                        <li><a href="fascia-soffit.html">Fascia & Soffit</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <a href="about_us.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact_us.html">Contact Us</a>
+    </div>
+
+    <div class="quote">
+        <a href="/contact/" id="header-btn" class="contact-btn">Get an Estimate</a>
+    </div>
+
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">
+        <img src="/images/icons/bars-solid.svg" alt="Menu">
+    </label>
+
+    <div class="mobile-dd">
+        <a href="/">Home</a>
+        <div class="mobile-services">
+            <span class="mobile-services-link">
+                Services <img src="/images/icons/caret-down.svg" class="caret-icon">
+            </span>
+            <ul class="mobile-subdd">
+                <li><a href="troughs-gutters.html">Eavestroughs & Gutters</a></li>
+                <li><a href="fascia-soffit.html">Fascia & Soffit</a></li>
+            </ul>
+        </div>
+        <a href="about_us.html">About Us</a>
+        <a href="faq.html">FAQ</a>
+        <a href="contact_us.html">Contact Us</a>
+        <a href="/contact/" class="mobile-estimate-btn">Get an Estimate</a>
+    </div>
+</header>

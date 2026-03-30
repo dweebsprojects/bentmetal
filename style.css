@@ -9,7 +9,11 @@
 }
 
 :root {
-    --brand-color: #8426af;
-    --boxshadow: #121616;
+    --brand-color: #31AFB4;
+    --boxshadow: #2a2b2b;
+    --txt: #303030;
+    --footer-bg:#123D40;
+    --footer-txt: white;
+    --footerbtm-txt: #474747;
 }
 
