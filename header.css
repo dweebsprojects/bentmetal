@@ -5,100 +5,43 @@ header {
     padding: 10px 40px;
     background-color: #F5F5F5;
     position: relative;
-    flex-wrap: wrap; /* Allows menu to drop to line 2 */
+    flex-wrap: wrap;
 }
 
-/* Logo Fixes */
-.home_logo svg, 
+/* Logo */
+.home_logo svg,
 .home_logo img {
-    height: 100px; 
+    height: 100px;
     width: auto;
     filter: invert(1);
     display: block;
 }
 
+/* Desktop nav links */
 .links {
     display: flex;
     align-items: center;
     gap: 40px;
-    font-size: large;
 }
 
-.links a, nav a {
+.links a {
     color: var(--txt);
     text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease;
+    transition: opacity 0.2s;
     white-space: nowrap;
 }
 
-/* Caret Icon Styling */
-.services_bar img, 
-.mobile-services-link img {
-    width: 25px;
-    height: auto;
-    color: var(--txt)
+.links a:hover {
+    opacity: 0.6;
 }
 
-/* Desktop Navigation */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-}
-
-nav li {
-    position: relative;
-    cursor: pointer;
-}
-
-nav li > .dropdown {
-position: absolute;
-    left: -40px; 
-    top: calc(100% + 15px); 
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    background: #fff;
-    padding: 10px 0; /* Vertical padding only */
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
-
-nav li:hover > .dropdown {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
-
-nav .dropdown a {
-    display: block;
-    width: 100%;
-    padding: 12px 20px;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-nav .dropdown a:hover {
-    background: #EFFAFB;
-}
-
-/* Buttons */
+/* Estimate button */
 #header-btn {
     display: inline-grid;
     place-items: center;
     padding: 18px 35px;
     background: var(--brand-color);
-    color: white !important;
+    color: white;
     text-decoration: none;
     font-weight: 600;
     border-radius: 6px;
@@ -109,117 +52,92 @@ nav .dropdown a:hover {
     opacity: 0.9;
 }
 
-.menu-checkbox, .menu-icon, .mobile-dd { display: none; }
+/* Hamburger button */
+.menu-icon {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+}
 
-.links { display: flex; gap: 40px; align-items: center; }
+.menu-icon img {
+    width: 35px;
+    height: auto;
+    display: block;
+}
 
+/* Mobile dropdown — hidden by default */
+.mobile-dd {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+    pointer-events: none;
+    z-index: 1000;
+}
 
+.mobile-dd.is-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.mobile-dd a {
+    padding: 15px 25px;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-dd a:hover {
+    background: #f9f9f9;
+}
+
+.mobile-estimate-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 50%;
+    margin: 20px auto;
+    background: var(--brand-color);
+    color: white !important;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 6px;
+    border-bottom: none !important;
+    transition: opacity 0.3s;
+}
+
+.mobile-estimate-btn:hover {
+    opacity: 0.9;
+    background: var(--brand-color) !important;
+}
+
+/* Mobile breakpoint */
 @media (max-width: 1130px) {
-    .links, .quote { display: none !important; }
-
-    .menu-icon { 
-        display: block; 
-        cursor: pointer;
-        order: 2; 
+    .links,
+    .quote {
+        display: none;
     }
 
-    .menu-icon img {
-        width: 35px;
-        height: auto;
-    }
-
-    .logo { 
-        order: 1; 
-        flex: 0 1 auto;
-    }
-
-    .home_logo svg, 
-    .home_logo img {
-        height: 60px;
-        width: auto;
-    }
-
-    .mobile-dd {
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: #fff;
-        border-top: 1px solid #ddd;
-        opacity: 0;
-        visibility: hidden;
-        transform: translateY(-10px);
-        transition: all 0.4s ease;
-        pointer-events: none;
-    }
-
-    .menu-checkbox:checked ~ .mobile-dd {
-        opacity: 1;
-        visibility: visible;
-        transform: translateY(0);
-        pointer-events: auto;
-    }
-
-    .menu-checkbox { 
-        display: none; 
-    }
-
-    .mobile-dd a, .mobile-services-link {
-        padding: 15px 25px;
-        color: #333;
-        text-decoration: none;
-        border-bottom: 1px solid #eee;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .mobile-subdd {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        background-color: #f9f9f9;
-        max-height: 0;
-        overflow: hidden;
-        opacity: 0;
-        transition: all 0.3s ease-in-out;
-    }
-
-    .mobile-subdd li a {
-        padding-left: 45px !important;
-        font-size: 0.95rem;
-        border-bottom: 1px solid #eee;
-        background: transparent;
-    }
-
-    .mobile-services.is-open .mobile-subdd {
-        max-height: 300px;
-        opacity: 1;
-        padding: 10px 0;
+    .menu-icon {
         display: block;
     }
 
-    .mobile-services.is-open .caret-icon {
-        transform: rotate(180deg);
-    }
-
-    .caret-icon {
-        transition: transform 0.3s ease;
-    }
-
-    .mobile-estimate-btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .home_logo svg,
+    .home_logo img {
         height: 60px;
-        width: 50%;
-        margin: 20px auto;
-        background: var(--brand-color);
-        color: white !important;
-        text-decoration: none;
-        font-weight: 600;
-        border-radius: 6px;
-        transition: opacity 0.3s;
+        width: auto;
     }
 }
