@@ -2,9 +2,10 @@
     position: relative;
     height: 85vh;
     min-height: 520px;
-    background-image: url('/images/gutters_calgary.webp');
+    background-image: url('/images/IMG_1277.webp');
     background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-position: center 80%;
     display: flex;
     align-items: center;
 }
@@ -12,7 +13,7 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, 0.52);
+    background: rgba(0, 0, 0, 0.30);
 }
 
 .hero-content {
@@ -241,7 +242,8 @@
 
 @media (max-width: 600px) {
     .hero {
-        height: 75vh;
+        height: 50vh;
+        background-position: center 90%;
     }
 
     .hero-content {
