@@ -1,0 +1,123 @@
+.contact-container {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+}
+
+.contact-card {
+    background: #fff;
+    width: 100%;
+    max-width: 600px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+.contact-header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-header h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-weight: 800;
+    color: #000;
+}
+
+.contact-header p {
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Keeps Name and Phone side-by-side */
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.form-group input, 
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+#submit-btn {
+    background-color: var(--brand-color);
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: opacity 0.2s;
+}
+
+#submit-btn:hover {
+    opacity: 0.9;
+}
+
+#form-status {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+.optional {
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--body-txt);
+}
+
+
+/* Mobile Fix: Stacks name and phone on small screens */
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+#form-status {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    min-height: 20px; /* Prevents layout jump when text appears */
+}
+
+.cf-turnstile {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    min-height: 65px; /* Standard height of the Turnstile widget */
+}

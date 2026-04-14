@@ -1,7 +1,7 @@
 /* ── FAQ Hero ── */
 .faq-hero {
     position: relative;
-    padding: 40px 40px 50px;
+    padding: 40px 40px 30px;
     background: var(--footer-bg);
     text-align: center;
     overflow: hidden;
@@ -251,11 +251,12 @@
 
 /* ── Product Cards ── */
 .logo-button-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    padding: 0 1rem;
-    max-width: 960px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .product-button {
@@ -328,7 +329,7 @@
 
 /* ── CTA Banner ── */
 .faq-cta-banner {
-    padding: 80px 40px;
+    padding: 40px 40px;
     text-align: center;
     background: var(--footer-bg);
 }
@@ -362,12 +363,6 @@
 }
 
 /* ── Responsive ── */
-@media (max-width: 900px) {
-    .logo-button-container {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
 @media (max-width: 600px) {
     .faq-hero {
         padding: 70px 24px 50px;
@@ -378,8 +373,27 @@
     }
 
     .logo-button-container {
-        grid-template-columns: 1fr;
-        max-width: 400px;
+        gap: 10px;
+        padding: 0 16px;
+    }
+
+    .logo-button-container .product-button {
+        flex: 1 1 0;
+        aspect-ratio: 1 / 1;
+        border-radius: 8px;
+    }
+
+    .logo-button-container .product-overlay {
+        align-items: center;
+        justify-content: center;
+        padding: 8px;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.35) 100%);
+        text-align: center;
+    }
+
+    .logo-button-container .product-overlay span {
+        font-size: 0.7rem;
+        line-height: 1.25;
     }
 
     .faq-question {

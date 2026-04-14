@@ -1,0 +1,232 @@
+/* ── About Hero ── */
+.about-hero {
+    position: relative;
+    padding: 40px 40px 30px;
+    background: var(--footer-bg);
+    text-align: center;
+    overflow: hidden;
+}
+
+.about-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, var(--footer-bg) 0%, #1a5a5e 100%);
+    opacity: 0.95;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+.about-hero h1 {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #fff;
+    margin-bottom: 0.75rem;
+    font-weight: 800;
+    line-height: 1.15;
+}
+
+.about-hero-sub {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
+}
+
+/* ── Owner Section ── */
+.owner-section {
+    padding: 80px 40px;
+}
+
+.owner-grid {
+    max-width: 1140px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.owner-image {
+    width: 100%;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 460px;
+    background: #e8ecec;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #c0c8c8;
+}
+
+.image-placeholder span {
+    color: #888;
+    font-weight: 400;
+    font-size: 0.95rem;
+}
+
+.owner-text h2 {
+    font-size: 1.9rem;
+    color: var(--txt);
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.owner-role {
+    color: var(--brand-color);
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.owner-text > p {
+    color: #555;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+}
+
+/* ── Dedication Section ── */
+.dedication-section {
+    padding: 80px 40px;
+    background: #f5f7f7;
+}
+
+.dedication-content {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.dedication-content h2 {
+    font-size: 1.9rem;
+    color: var(--txt);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+}
+
+.dedication-content p {
+    color: #555;
+    font-weight: 300;
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+}
+
+/* ── CTA Banner ── */
+.about-cta-banner {
+    padding: 80px 40px;
+    text-align: center;
+    background: var(--footer-bg);
+}
+
+.about-cta-banner h2 {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.about-cta-banner p {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 300;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.about-cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 18px 35px;
+    background: var(--brand-color);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: opacity 0.2s;
+}
+
+.btn-primary:hover {
+    opacity: 0.88;
+}
+
+.btn-secondary-light {
+    display: inline-block;
+    padding: 18px 35px;
+    border: 2px solid var(--brand-color);
+    color: var(--brand-color);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.btn-secondary-light:hover {
+    background: var(--brand-color);
+    color: #fff;
+}
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+    .owner-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .owner-image {
+        order: -1;
+    }
+
+    .image-placeholder {
+        height: 360px;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero {
+        padding: 70px 24px 50px;
+    }
+
+    .owner-section {
+        padding: 60px 24px;
+    }
+
+    .owner-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .image-placeholder {
+        height: 300px;
+    }
+
+    .dedication-section {
+        padding: 60px 24px;
+    }
+
+    .dedication-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-cta-banner {
+        padding: 60px 24px;
+    }
+
+    .about-cta-banner h2 {
+        font-size: 1.6rem;
+    }
+}
