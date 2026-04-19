@@ -113,78 +113,21 @@
     background: var(--brand-color);
 }
 
-/* ── Process Section ── */
-.process-section {
-    padding: 80px 40px;
-    background: var(--footer-bg);
-    text-align: center;
-}
-
-.process-section .section-heading {
-    color: #fff;
-}
-
-.process-section .section-sub {
-    color: rgba(255, 255, 255, 0.65);
-}
-
-.process-grid {
-    max-width: 1140px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
-}
-
-.process-step {
-    padding: 36px 28px;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.step-number {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: var(--brand-color);
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 1.25rem;
-}
-
-.process-step h3 {
-    color: #fff;
-    font-size: 1.1rem;
-    margin-bottom: 0.75rem;
-}
-
-.process-step p {
-    color: rgba(255, 255, 255, 0.65);
-    font-weight: 300;
-    font-size: 0.9rem;
-    line-height: 1.7;
-}
-
 /* ── CTA Banner ── */
 .services-cta-banner {
     padding: 80px 40px;
     text-align: center;
-    background: #f5f7f7;
+    background: var(--footer-bg);
 }
 
 .services-cta-banner h2 {
     font-size: 2rem;
-    color: var(--txt);
+    color: white;
     margin-bottom: 0.75rem;
 }
 
 .services-cta-banner p {
-    color: #666;
+    color: white;
     font-weight: 300;
     font-size: 1rem;
     margin-bottom: 2rem;
@@ -246,11 +189,6 @@
     .service-detail-image img {
         height: 300px;
     }
-
-    .process-grid {
-        grid-template-columns: 1fr;
-        max-width: 480px;
-    }
 }
 
 @media (max-width: 600px) {
@@ -270,19 +208,11 @@
         font-size: 1.5rem;
     }
 
-    .process-section {
-        padding: 60px 24px;
-    }
-
     .services-cta-banner {
         padding: 60px 24px;
     }
 
     .services-cta-banner h2 {
-        font-size: 1.6rem;
-    }
-
-    .section-heading {
         font-size: 1.6rem;
     }
 }
