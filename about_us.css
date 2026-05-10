@@ -55,21 +55,39 @@
     width: 100%;
 }
 
-.image-placeholder {
+.owner-monogram {
     width: 100%;
     height: 460px;
-    background: #e8ecec;
+    background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
     border-radius: 10px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px dashed #c0c8c8;
+    gap: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 
-.image-placeholder span {
-    color: #888;
+.monogram-initials {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 8rem;
     font-weight: 400;
-    font-size: 0.95rem;
+    color: #f4f6f6;
+    line-height: 1;
+    letter-spacing: 0.02em;
+}
+
+.monogram-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--brand-color);
+}
+
+.monogram-name {
+    color: #c8d0d0;
+    font-size: 0.85rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
 }
 
 .owner-text h2 {
@@ -192,8 +210,12 @@
         order: -1;
     }
 
-    .image-placeholder {
+    .owner-monogram {
         height: 360px;
+    }
+
+    .monogram-initials {
+        font-size: 6.5rem;
     }
 }
 
@@ -210,8 +232,12 @@
         font-size: 1.5rem;
     }
 
-    .image-placeholder {
+    .owner-monogram {
         height: 300px;
+    }
+
+    .monogram-initials {
+        font-size: 5.5rem;
     }
 
     .dedication-section {

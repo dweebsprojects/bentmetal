@@ -1,0 +1,8 @@
+# Security Policy for Bent Metal Exteriors (bentmetal.ca)
+# If you have discovered a security vulnerability, please report it to us
+# using the contact details below. We appreciate responsible disclosure.
+
+Contact: mailto:info@bentmetal.ca
+Expires: 2027-05-09T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://bentmetal.ca/.well-known/security.txt
