@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BENT METAL EXTERIORS</title>
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}">
 
-        <link rel="canonical" href="https://bentmetal.ca{{ page.url }}">
+    <link rel="canonical" href="https://bentmetal.ca{{ page.url }}">
     <meta property="og:url" content="https://bentmetal.ca{{ page.url }}">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Bent Metal Exteriors">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="/images/logos/home_logo.svg">
+    <meta property="og:image" content="https://bentmetal.ca/images/logos/home_logo.svg">
 
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H76NW6JDTQ"></script>
@@ -37,9 +39,11 @@
     {
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
-      "name": "BENT METAL Exteriors",
+      "@id": "https://bentmetal.ca/#business",
+      "name": "Bent Metal Exteriors",
       "url": "https://bentmetal.ca",
-      "logo": "",
+      "logo": "https://bentmetal.ca/images/logos/home_logo.svg",
+      "image": "https://bentmetal.ca/images/logos/home_logo.svg",
       "telephone": "+1-403-890-8442",
       "email": "info@bentmetal.ca",
       "address": {
@@ -48,17 +52,35 @@
         "addressRegion": "AB",
         "addressCountry": "CA"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.0447,
+        "longitude": -114.0719
+      },
       "areaServed": [
         { "@type": "City", "name": "Calgary" },
+        { "@type": "City", "name": "Airdrie" },
+        { "@type": "City", "name": "Cochrane" },
+        { "@type": "City", "name": "Chestermere" },
+        { "@type": "City", "name": "Okotoks" },
         { "@type": "City", "name": "Red Deer" },
         { "@type": "City", "name": "Lethbridge" },
         { "@type": "City", "name": "Medicine Hat" },
-        { "@type": "City", "name": "Okotoks" },
         { "@type": "City", "name": "Sundre" },
         { "@type": "City", "name": "Brooks" },
         { "@type": "AdministrativeArea", "name": "Southern Alberta" }
       ],
-      "description": "Professional eavestrough, soffit, and fascia installation in Calgary. Built to last in Alberta's climate.",
+      "knowsAbout": [
+        "Eavestrough installation",
+        "Gutter installation",
+        "Gutter repair",
+        "Gutter cleaning",
+        "Soffit installation",
+        "Fascia installation",
+        "Downspout installation",
+        "Leaf guard installation"
+      ],
+      "description": "Professional eavestrough (gutter), soffit, and fascia installation, repair, and cleaning in Calgary and Southern Alberta. Built for Alberta's climate.",
       "priceRange": "$$"
     }
     </script>
