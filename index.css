@@ -243,7 +243,8 @@
 
 @media (max-width: 600px) {
     .hero {
-        height: 50vh;
+        height: auto;
+        padding: 48px 0;
         background-position: center 90%;
     }
 
