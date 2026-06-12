@@ -12,7 +12,7 @@
     <meta property="og:site_name" content="Bent Metal Exteriors">
     <meta property="og:title" content="{{ title }}">
     <meta property="og:description" content="{{ description }}">
-    <meta property="og:image" content="https://bentmetal.ca/images/logos/home_logo.svg">
+    <meta property="og:image" content="https://bentmetal.ca/images/logos/IMG_2056.PNG">
 
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-H76NW6JDTQ"></script>
@@ -33,7 +33,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="{{ title }}">
     <meta name="twitter:description" content="{{ description }}">
-    <meta name="twitter:image" content="https://bentmetal.ca/images/logos/home_logo.svg">
+    <meta name="twitter:image" content="https://bentmetal.ca/images/logos/IMG_2056.PNG">
 
     <script type="application/ld+json">
     {
@@ -42,8 +42,8 @@
       "@id": "https://bentmetal.ca/#business",
       "name": "Bent Metal Exteriors",
       "url": "https://bentmetal.ca",
-      "logo": "https://bentmetal.ca/images/logos/home_logo.svg",
-      "image": "https://bentmetal.ca/images/logos/home_logo.svg",
+      "logo": "https://bentmetal.ca/images/logos/IMG_2056.png",
+      "image": "https://bentmetal.ca/images/logos/IMG_2056.png",
       "telephone": "+1-403-890-8442",
       "email": "info@bentmetal.ca",
       "address": {
@@ -85,7 +85,9 @@
     }
     </script>
 
+    {% if page.url == "/" %}
     <link rel="preload" href="/images/IMG_1277.webp" as="image" type="image/webp" media="(min-width: 768.1px)" fetchpriority="high">
+    {% endif %}
 
     <style>
         {% include "poppins.css" %}

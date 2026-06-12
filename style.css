@@ -17,3 +17,25 @@
     --footerbtm-txt: #474747;
 }
 
+/* ── Shared Page Hero (interior pages) ──
+   Controls the hero band height on every page except the homepage.
+   Change min-height here to resize all heroes at once. */
+.page-hero {
+    position: relative;
+    min-height: 250px;
+    padding: 30px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--footer-bg);
+    text-align: center;
+    overflow: hidden;
+}
+
+@media (max-width: 600px) {
+    .page-hero {
+        min-height: 220px;
+        padding: 24px;
+    }
+}
+

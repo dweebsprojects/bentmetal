@@ -1,12 +1,4 @@
-/* ── Services Hero ── */
-.services-hero {
-    position: relative;
-    padding: 40px 40px 30px;
-    background: var(--footer-bg);
-    text-align: center;
-    overflow: hidden;
-}
-
+/* ── Services Hero (sizing comes from .page-hero in style.css) ── */
 .services-hero-overlay {
     position: absolute;
     inset: 0;
@@ -192,10 +184,6 @@
 }
 
 @media (max-width: 600px) {
-    .services-hero {
-        padding: 70px 24px 50px;
-    }
-
     .service-detail {
         padding: 60px 24px;
     }

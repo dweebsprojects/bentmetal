@@ -1,12 +1,4 @@
-/* ── FAQ Hero ── */
-.faq-hero {
-    position: relative;
-    padding: 40px 40px 30px;
-    background: var(--footer-bg);
-    text-align: center;
-    overflow: hidden;
-}
-
+/* ── FAQ Hero (sizing comes from .page-hero in style.css) ── */
 .faq-hero-overlay {
     position: absolute;
     inset: 0;
@@ -17,7 +9,7 @@
 .faq-hero-content {
     position: relative;
     z-index: 1;
-    max-width: 640px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
@@ -364,9 +356,6 @@
 
 /* ── Responsive ── */
 @media (max-width: 600px) {
-    .faq-hero {
-        padding: 70px 24px 50px;
-    }
 
     .faq-section {
         padding: 40px 16px;

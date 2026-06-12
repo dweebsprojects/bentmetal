@@ -1,12 +1,4 @@
-/* ── Hero ── */
-.privacy-hero {
-    position: relative;
-    padding: 60px 40px 50px;
-    background: var(--footer-bg);
-    text-align: center;
-    overflow: hidden;
-}
-
+/* ── Hero (sizing comes from .page-hero in style.css) ── */
 .privacy-hero-overlay {
     position: absolute;
     inset: 0;
@@ -167,9 +159,6 @@
 
 /* ── Responsive ── */
 @media (max-width: 768px) {
-    .privacy-hero {
-        padding: 50px 24px 40px;
-    }
 
     .privacy-container {
         padding: 40px 20px 60px;

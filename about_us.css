@@ -1,12 +1,4 @@
-/* ── About Hero ── */
-.about-hero {
-    position: relative;
-    padding: 40px 40px 30px;
-    background: var(--footer-bg);
-    text-align: center;
-    overflow: hidden;
-}
-
+/* ── About Hero (sizing comes from .page-hero in style.css) ── */
 .about-hero-overlay {
     position: absolute;
     inset: 0;
@@ -53,6 +45,17 @@
 
 .owner-image {
     width: 100%;
+}
+
+.owner-image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 10px;
+    border: 4px solid var(--footer-bg);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    display: block;
 }
 
 .owner-monogram {
@@ -210,20 +213,12 @@
         order: -1;
     }
 
-    .owner-monogram {
+    .owner-image img {
         height: 360px;
-    }
-
-    .monogram-initials {
-        font-size: 6.5rem;
     }
 }
 
 @media (max-width: 600px) {
-    .about-hero {
-        padding: 70px 24px 50px;
-    }
-
     .owner-section {
         padding: 60px 24px;
     }
@@ -232,12 +227,8 @@
         font-size: 1.5rem;
     }
 
-    .owner-monogram {
+    .owner-image img {
         height: 300px;
-    }
-
-    .monogram-initials {
-        font-size: 5.5rem;
     }
 
     .dedication-section {
