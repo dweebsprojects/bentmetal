@@ -20,14 +20,47 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
 
+    // Opt-out model: analytics and ad measurement are on unless the visitor has
+    // turned them off in the cookie banner (read from its cookie so returning
+    // visitors' choices apply before any tag fires).
+    var ccCategories = null;
+    try {
+      var ccMatch = document.cookie.match(/(?:^|;\s*)cc_cookie=([^;]+)/);
+      if (ccMatch) ccCategories = JSON.parse(decodeURIComponent(ccMatch[1])).categories || [];
+    } catch (e) {}
+    function ccAllowed(category) {
+      return !ccCategories || ccCategories.indexOf(category) !== -1 ? 'granted' : 'denied';
+    }
+
+    // Stricter opt-in default for regions that require it.
     gtag('consent', 'default', {
       'analytics_storage': 'denied',
+      'ad_storage': 'denied',
+      'ad_user_data': 'denied',
+      'ad_personalization': 'denied',
+      'region': ['AT','BE','BG','HR','CY','CZ','DK','EE','FI','FR','DE','GR','HU','IS','IE','IT','LV','LI','LT','LU','MT','NL','NO','PL','PT','RO','SK','SI','ES','SE','GB','CH','CA-QC'],
       'wait_for_update': 500
-    }); 
+    });
+
+    // We never use remarketing or personalized ads, so ad_personalization stays denied.
+    gtag('consent', 'default', {
+      'analytics_storage': ccAllowed('analytics'),
+      'ad_storage': ccAllowed('advertising'),
+      'ad_user_data': ccAllowed('advertising'),
+      'ad_personalization': 'denied'
+    });
 
     gtag('js', new Date());
     gtag('config', 'G-H76NW6JDTQ');
   </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-T9KHQW2Q');</script>
+  <!-- End Google Tag Manager -->
 
 
     <meta name="twitter:card" content="summary_large_image">
@@ -106,6 +139,10 @@
     <link rel="icon" type="image/x-icon" href="/images/logos/outline_logo.png">
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T9KHQW2Q"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     {% include "header.html" %}
 
@@ -115,6 +152,7 @@
 
     {% include "footer.html" %}
 
+    <script src="/js/tracking.js" defer></script>
     <script src="/js/navbar.js" defer></script>
     <script src="/js/toast.js" defer></script>
 
