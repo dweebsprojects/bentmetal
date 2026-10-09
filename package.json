@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "deploy": "npx eleventy && wrangler deploy",
-    "preview": "npx eleventy && wrangler dev"
+    "deploy": "npx @11ty/eleventy && npx wrangler deploy",
+    "preview": "npx @11ty/eleventy && npx wrangler dev"
   },
   "keywords": [],
   "author": "",
