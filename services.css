@@ -63,6 +63,22 @@
     display: block;
 }
 
+.service-detail-image img.photo-bottom {
+    object-position: center bottom;
+}
+
+.new-badge {
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 0.75rem;
+    border-radius: 999px;
+    background: var(--brand-color);
+    color: #fff;
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 .service-detail-text h2 {
     font-size: 1.9rem;
     color: var(--txt);
