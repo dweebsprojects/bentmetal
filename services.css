@@ -94,6 +94,12 @@
     margin-bottom: 1.5rem;
 }
 
+.service-detail-text > p a {
+    color: var(--brand-color);
+    font-size: inherit;
+    font-weight: 600;
+}
+
 .service-list {
     list-style: none;
     padding: 0;
